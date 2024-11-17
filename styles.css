@@ -1,57 +1,39 @@
-/* styles.css */
+/* إعادة تعيين بعض الأنماط الافتراضية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* تهيئة وتصميم الواجهة */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 button {
-    padding: 10px 20px;
-    margin: 20px;
-    font-size: 1.2em;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 button:hover {
-    background-color: #45a049;
-}
-
-/* تحسين العرض للمحتوى */
-main {
-    padding: 20px;
-}
-
-h2 {
-    color: #4CAF50;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
+  background-color: #218838;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
 }
