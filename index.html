@@ -1,88 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My PWA Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تطبيق PWA</title>
+  
+  <!-- ربط ملف الـ CSS -->
+  <link rel="stylesheet" href="styles.css">
 
-    <!-- إضافة Manifest بشكل ديناميكي -->
-    <script>
-        var manifestData = {
-            "name": "My Web App",
-            "short_name": "MyApp",
-            "description": "This is a sample progressive web app.",
-            "start_url": "/",
-            "display": "standalone",
-            "background_color": "#ffffff",
-            "theme_color": "#000000",
-            "icons": [
-                {
-                    "src": "icons/icon-192x192.png",
-                    "sizes": "192x192",
-                    "type": "image/png"
-                },
-                {
-                    "src": "icons/icon-512x512.png",
-                    "sizes": "512x512",
-                    "type": "image/png"
-                }
-            ]
-        };
+  <!-- ربط ملف الـ Manifest -->
+  <link rel="manifest" href="manifest.json">
 
-        // إضافة Manifest إلى الـ head
-        var manifest = document.createElement('link');
-        manifest.rel = 'manifest';
-        manifest.href = 'data:application/json,' + encodeURIComponent(JSON.stringify(manifestData));
-        document.head.appendChild(manifest);
-    </script>
-
-    <!-- رابط لتحميل Service Worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js').then((registration) => {
-                    console.log('Service Worker registered with scope: ', registration.scope);
-                }).catch((error) => {
-                    console.log('Service Worker registration failed: ', error);
-                });
-            });
-        }
-    </script>
-
-    <!-- روابط لأيقونات التطبيق -->
-    <link rel="icon" href="icons/icon-192x192.png" sizes="192x192">
-    <link rel="icon" href="icons/icon-512x512.png" sizes="512x512">
+  <!-- إعلانات خدمة الـ Service Worker -->
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My PWA Website</h1>
-        <p>This is a Progressive Web App with all the essential features.</p>
-    </header>
-
-    <main>
-        <!-- زر لتفعيل الإشعارات -->
-        <button id="notifyBtn">Enable Notifications</button>
-
-        <!-- زر لتحويل الموقع إلى تطبيق -->
-        <button id="installBtn">Install App</button>
-
-        <!-- محتوى إضافي للموقع -->
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Installable App</li>
-                <li>Offline Support</li>
-                <li>Push Notifications</li>
-                <li>Fast & Reliable</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 My PWA Website. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <header>
+    <h1>أهلاً بك في تطبيقنا PWA</h1>
+  </header>
+  
+  <main>
+    <p>مرحبا بك في تطبيق PWA الخاص بنا. يمكنك الآن استخدامه كموقع ويب أو تثبيته على جهازك!</p>
+    <button id="installBtn" style="display: none;">تثبيت التطبيق</button>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024. جميع الحقوق محفوظة.</p>
+  </footer>
 </body>
 </html>
