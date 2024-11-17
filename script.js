@@ -31,3 +31,35 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+
+// التعامل مع زر "إنشاء تطبيق" وتخصيصات المستخدم
+document.getElementById('generateAppBtn').addEventListener('click', () => {
+  const themeColor = document.getElementById('themeColor').value;
+  const iconUpload = document.getElementById('iconUpload').files[0];
+
+  // تحديث ملف الـ Manifest بناءً على التخصيصات
+  const manifest = {
+    name: "تطبيق PWA مخصص",
+    short_name: "تطبيق PWA",
+    description: "تطبيق ويب مخصص من قبل المستخدم.",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#ffffff",
+    theme_color: themeColor,
+    icons: [
+      {
+        src: URL.createObjectURL(iconUpload),
+        sizes: "192x192",
+        type: "image/png"
+      },
+      {
+        src: URL.createObjectURL(iconUpload),
+        sizes: "512x512",
+        type: "image/png"
+      }
+    ]
+  };
+
+  // تحديث ملف Manifest (يمكن تخزينه في الـ server أو إرساله إلى الملف بشكل ديناميكي)
+  console.log('تم تحديث التخصيصات:', manifest);
+});
