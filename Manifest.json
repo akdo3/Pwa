@@ -1,11 +1,11 @@
 {
-  "name": "تطبيق PWA الخاص بي",
+  "name": "تطبيق PWA مخصص",
   "short_name": "تطبيق PWA",
-  "description": "هذا هو تطبيق ويب تقدمي (PWA).",
+  "description": "هذا تطبيق ويب تقدمي مخصص يمكن للمستخدم تخصيصه.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#000000", 
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
