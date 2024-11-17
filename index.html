@@ -3,29 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تطبيق PWA</title>
-  
-  <!-- ربط ملف الـ CSS -->
+  <title>تطبيق PWA مخصص</title>
+
+  <!-- ربط ملف CSS -->
   <link rel="stylesheet" href="styles.css">
 
   <!-- ربط ملف الـ Manifest -->
   <link rel="manifest" href="manifest.json">
 
-  <!-- إعلانات خدمة الـ Service Worker -->
+  <!-- ربط ملف JavaScript -->
   <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <h1>أهلاً بك في تطبيقنا PWA</h1>
+    <h1>إنشاء تطبيق PWA مخصص</h1>
   </header>
-  
+
   <main>
-    <p>مرحبا بك في تطبيق PWA الخاص بنا. يمكنك الآن استخدامه كموقع ويب أو تثبيته على جهازك!</p>
+    <h2>اختر إعدادات تطبيقك:</h2>
+
+    <!-- خيار لاختيار اللون الرئيسي -->
+    <label for="themeColor">اختر اللون الرئيسي:</label>
+    <input type="color" id="themeColor" name="themeColor" value="#000000">
+
+    <!-- خيار لاختيار الأيقونة -->
+    <label for="iconUpload">تحميل أيقونة:</label>
+    <input type="file" id="iconUpload" accept="image/*">
+
+    <!-- زر لتثبيت التطبيق -->
     <button id="installBtn" style="display: none;">تثبيت التطبيق</button>
+
+    <!-- زر لتوليد تطبيق جديد -->
+    <button id="generateAppBtn">إنشاء تطبيق</button>
   </main>
-  
+
   <footer>
-    <p>&copy; 2024. جميع الحقوق محفوظة.</p>
+    <p>&copy; 2024 جميع الحقوق محفوظة.</p>
   </footer>
 </body>
 </html>
